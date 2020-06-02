@@ -1,34 +1,104 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap-theme.css">
-		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-		<link rel="stylesheet" href="css/bootstrap.css">
-		<link rel="stylesheet" href="css/bootstrap.min.css">
-		<link rel="stylesheet" href="css/templatemo-style.css">
-		<link rel="stylesheet" href="css/bootstrap.css">
-  </head>
-  <body>
-    <h1>HBL Plan</h1>
-    <table>
-      <tr>
-      <th>Term 2 Week</th>
-      <th>Plan</th>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Sorting, OOP</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>linked list, stack, queue</td>
-      </tr>
-      </tr>
-    </table>
-  <h2>Progress</h2>
-  <img src="https://user-images.githubusercontent.com/25144944/80004667-30467800-84f5-11ea-9f01-d79d7ed8d7b7.png" alt="CS50 Game Course" width="1250" height="400">
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
+
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("http://nkd.co.uk/wp-content/uploads/banner.jpg");
+  min-height: 75%;
+}
+
+.menu {
+  display: none;
+}
+</style>
+<body>
+
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s4">
+      <a href="#" class="w3-button w3-block w3-black">HBL</a>
+    </div>
+    <div class="w3-col s4">
+      <a href="#about" class="w3-button w3-block w3-black">Progress</a>
+    </div>
+    <div class="w3-col s4">
+      <a href="#menu" class="w3-button w3-block w3-black">Sources</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Fun Learning >:)</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="text-shadow:2px 2px 0 #444; font-size:90px" style="font-size:90px" >HBL</span>
+  </div>
+</header>
+
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
+
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Progress</span></h5>
+  <img src="https://user-images.githubusercontent.com/25144944/80004667-30467800-84f5-11ea-9f01-d79d7ed8d7b7.png" alt="CS50 Game Course" style="width:100%;max-width:1000px" class="w3-margin-top">
   <img src="Gallery/VUE.JPG" alt="Vue.js Progress" width="1250" height="1250">
   <img src="Gallery/SQLProgress.JPG">
-  </body>
+  <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">Sources</span></h5>
+  <a href="https://www.youtube.com/watch?v=7gX-M26Oj1Y&t=12041s" title="W3.CSS" target="_blank" class="w3-hover-text-green">Unity C# Tutorial</a></p>
+  <a href="https://www.youtube.com/watch?v=p_mK2LYn_kM" title="W3.CSS" target="_blank" class="w3-hover-text-green">Unity Game Tutorial</a></p>
+  <a href="https://www.youtube.com/watch?v=JivuXdrIHK0&t=3s" title="W3.CSS" target="_blank" class="w3-hover-text-green">Unity Pause Menu</a></p>
+  <a href="https://www.youtube.com/watch?v=o0j7PdU88a4" title="W3.CSS" target="_blank" class="w3-hover-text-green">Unity Timer</a></p>
+  <a href="https://www.edx.org/course/cs50s-introduction-to-computer-science" title="W3.CSS" target="_blank" class="w3-hover-text-green">CS50</a></p>
+  <a href="https://www.vuemastery.com/" title="W3.CSS" target="_blank" class="w3-hover-text-green">Vue JS</a></p>
+  <a href="https://courses.packtpub.com/courses/sql" title="W3.CSS" target="_blank" class="w3-hover-text-green">The SQL Workshop</a></p>
+  
+  </div>
+</div>
+
+<!-- End page content -->
+</div>
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
 </html>
